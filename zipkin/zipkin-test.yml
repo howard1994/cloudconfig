@@ -1,6 +1,10 @@
 spring:
   application:
     name: zipkin
+  boot:
+    admin:
+      client:
+        url: http://212.64.11.93:8084
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
