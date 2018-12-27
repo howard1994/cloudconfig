@@ -1,6 +1,8 @@
 spring:
   application:
     name: emailService
+  zipkin:
+    base-url: http://212.64.11.93:9411
 server:
   port: 8989
 eureka:
