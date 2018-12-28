@@ -12,7 +12,7 @@ spring:
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
-  port: 8762
+  port: 8763
 eureka:
   instance:
     ip-address: 212.64.11.93
