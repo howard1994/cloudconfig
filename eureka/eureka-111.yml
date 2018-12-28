@@ -13,6 +13,7 @@ server:
   port: 8761
 eureka:
   instance:
+    ip-address: 111.231.66.26
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
