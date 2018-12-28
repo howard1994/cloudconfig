@@ -12,10 +12,10 @@ spring:
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
-  port: 8763
+  port: 8762
 eureka:
   instance:
-    ip-address: 212.64.11.93
+    ip-address: 111.231.66.26
     prefer-ip-address: true
     instance-id: ${eureka.instance.ip-address}:${server.port}
   client:
