@@ -1,6 +1,6 @@
 spring:
   application:
-    name: zipkin
+    name: feign
   boot:
     admin:
       client:
@@ -12,10 +12,10 @@ spring:
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
-  port: 9411
+  port: 8766
 eureka:
   instance:
-    ip-address: 212.64.11.93
+    ip-address: localhost
     prefer-ip-address: true
     instance-id: ${eureka.instance.ip-address}:${server.port}
   client:
