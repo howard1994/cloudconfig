@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: emailService
+  boot:
+    admin:
+      client:
+        url: http://212.64.11.93:8084
+        instance:
+          prefer-ip: true
+          management-base-url: http://${eureka.instance.ip-address}:${server.port}
+          service-base-url: http://${eureka.instance.ip-address}:${server.port}
+  zipkin:
+    base-url: http://212.64.11.93:9411
+server:
+  port: 8763
+eureka:
+  instance:
+    ip-address: 212.64.11.93
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://212.64.11.93:8761/eureka/,http://111.231.66.26:8761/eureka/
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
