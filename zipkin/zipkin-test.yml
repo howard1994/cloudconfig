@@ -15,7 +15,7 @@ eureka:
   instance:
     ip-address: 212.64.11.93
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    instance-id: ${eureka.instance.ip-address}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://212.64.11.93:8761/eureka/,http://111.231.66.26:8761/eureka/
@@ -24,10 +24,12 @@ management:
   endpoint:
     health:
       show-details: always
-    endpoints:
-      web:
-        exposure:
-          include: health,info
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  server:
+    address: ${eureka.instance.ip-address}
   metrics:
     web:
       server:
