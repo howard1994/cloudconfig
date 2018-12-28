@@ -5,6 +5,8 @@ spring:
     admin:
       client:
         url: http://212.64.11.93:8084
+        instance:
+          prefer-ip: true
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
@@ -12,8 +14,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: 111.231.66.26
-    instance-id: ${eureka.instance.ip-address}:${spring.application.name}:${server.port}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     register-with-eureka: false
     fetch-registry: false
