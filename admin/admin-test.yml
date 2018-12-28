@@ -5,7 +5,6 @@ spring:
     base-url: http://212.64.11.93:9411
 server:
   port: 8084
-  max-http-header-size: 4048576
 eureka:
   instance:
     ip-address: 212.64.11.93
