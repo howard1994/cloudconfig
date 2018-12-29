@@ -15,7 +15,7 @@ server:
   port: 8766
 eureka:
   instance:
-    ip-address: 212.64.11.93
+    ip-address: localhost
     prefer-ip-address: true
     instance-id: ${eureka.instance.ip-address}:${server.port}
   client:
@@ -30,3 +30,6 @@ management:
     web:
       exposure:
         include: health,info
+feign:
+  hystrix:
+    enabled: true
