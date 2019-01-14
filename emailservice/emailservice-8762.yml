@@ -4,8 +4,6 @@ spring:
     username: root
     password: 123329
     url: jdbc:mysql://212.64.11.93:3306/emailService?serverTimezone=GMT%2B8
-  mybatis:
-    mapper-locations: classpath:mapper/*.xml
   application:
     name: emailService
   boot:
@@ -39,4 +37,6 @@ management:
 webpower:
   username: unicemall
   password: '*0901UNicehair'
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
 
