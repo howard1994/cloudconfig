@@ -5,7 +5,7 @@ spring:
     password: 123329
     url: jdbc:mysql://212.64.11.93:3306/emailService?serverTimezone=GMT%2B8
   application:
-    name: emailService
+    name: smsService
   boot:
     admin:
       client:
@@ -17,7 +17,7 @@ spring:
   zipkin:
     base-url: http://212.64.11.93:9411
 server:
-  port: 8762
+  port: 8777
 eureka:
   instance:
     ip-address: localhost
@@ -34,10 +34,6 @@ management:
     web:
       exposure:
         include: health,info
-webpower:
-  username: 'unicemall'
-  password: '*0901UNicehair'
-  defaultName: 'emailservice'
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 
