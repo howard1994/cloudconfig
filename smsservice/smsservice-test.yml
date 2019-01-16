@@ -36,4 +36,9 @@ management:
         include: health,info
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+sms:
+  app-id: 8761804bc420438f868864db1b9f3c1f
+  account-sid: 2e949cee3a3ee2183f1f7e94badec8a4
+  auth-token: b856041d5397fb0b7e66b3641332d105
+  rest-url: https://open.ucpaas.com/ol/sms/
 
