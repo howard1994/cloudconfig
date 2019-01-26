@@ -39,8 +39,4 @@ management:
     web:
       exposure:
         include: health,info
-security:
-  oauth2:
-    resource:
-      filter-order: 3
 
