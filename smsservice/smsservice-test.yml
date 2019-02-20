@@ -41,4 +41,15 @@ sms:
   account-sid: 2e949cee3a3ee2183f1f7e94badec8a4
   auth-token: b856041d5397fb0b7e66b3641332d105
   rest-url: https://open.ucpaas.com/ol/sms/
-
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:7777/oauth/token_key
+    client:
+      client-id: sms_client
+      client-secret: longqi.123
+      access-token-uri: http://localhost:7777/oauth/token
+      grant-type: password,refresh_token
+      scope: server
+      user-authorization-uri: http://localhost:7777/oauth/authorize
