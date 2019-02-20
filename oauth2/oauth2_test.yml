@@ -10,7 +10,7 @@ spring:
     show-sql: true
 
   application:
-    name: oauth
+    name: oauth2
   boot:
     admin:
       client:
