@@ -33,3 +33,15 @@ management:
 feign:
   hystrix:
     enabled: true
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:7777/oauth/token_key
+    client:
+      client-id: feign_client
+      client-secret: longqi.123
+      access-token-uri: http://localhost:7777/oauth/token
+      grant-type: password,refresh_token
+      scope: server
+      user-authorization-uri: http://localhost:7777/oauth/authorize
